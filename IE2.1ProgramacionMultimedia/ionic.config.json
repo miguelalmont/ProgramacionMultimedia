@@ -1,0 +1,7 @@
+{
+  "name": "IE2.1ProgramacionMultimedia",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

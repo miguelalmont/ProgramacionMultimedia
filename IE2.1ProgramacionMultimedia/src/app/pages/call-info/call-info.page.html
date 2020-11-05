@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/"
+        text="ATRAS"
+        color="medium">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-title mode="md">Titulo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-avatar class="item-avatar">
+      <img #image>
+    </ion-avatar>
+    <h1>{{ pj.title }}</h1>
+    <h4>{{ pj.subtitle }}</h4>
+    <ion-button expand="block" (click)="goBack()">REGRESAR</ion-button>
+</ion-content>

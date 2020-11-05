@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar mode="md">
+    <ion-title>Llamadas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item (click)="funcion(0)">
+      <ion-avatar slot="start">
+        <img #image src='../../../assets/han_avatar.jpg'>
+      </ion-avatar>
+      <ion-label>
+        <h2 #title>Han Solo</h2>
+        <p #subtitle>Cazarecompensas</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item (click)="funcion(1)">
+      <ion-avatar slot="start">
+        <img #image src="../../../assets/rey_avatar.png">
+      </ion-avatar>
+      <ion-label>
+        <h2 #title>Rey</h2>
+        <p #subtitle>Recolectora</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item (click)="funcion(2)">
+      <ion-avatar slot="start">
+        <img #image src="../../../assets/finn_avatar.png">
+      </ion-avatar>
+      <ion-label>
+        <h2 #title>Finn</h2>
+        <p #subtitle>Piloto</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item (click)="funcion(3)">
+      <ion-avatar slot="start">
+        <img #image src="../../../assets/leia_avatar.jpg">
+      </ion-avatar>
+      <ion-label>
+        <h2 #title>Leia</h2>
+        <p #subtitle>Princesa</p>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
