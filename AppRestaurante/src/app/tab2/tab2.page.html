@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>
+      Tapería La Pizarra
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title size="large" class="mt-1 text-center">Nuestra Carta</ion-title>
+    </ion-toolbar>
+    <ion-label>
+      <p class="container m-1 text-center">Seleciona los platos, añádelos al pedido y para finalizar pulsa el botón "Terminar".</p>
+    </ion-label>
+  </ion-header>
+
+  <ion-item *ngFor="let item of menu, let i = index" multiple="true">
+    <ion-label>{{ item.name }}</ion-label>
+    <ion-select ok-text="Aceptar" cancel-text="Cancelar" multiple="true" [(ngModel)]="selectedOrder">
+      <ion-select-option *ngFor="let plato of item.data" [value]="{name: plato.name, pvp: plato.pvp}">{{ plato.name }}</ion-select-option>
+    </ion-select>
+    <ion-button color="success" (click)="addOrder()">Añadir</ion-button>
+  </ion-item>
+  
+  <ion-footer>
+    <ion-row>
+      <ion-col size="6">
+        <div class="container" *ngIf="finalOrder.length > 0">
+          <ion-label>Tu pedido:</ion-label>
+          <ion-label *ngFor="let item of finalOrder">
+              <p class="container">·{{ item.name }}</p>
+          </ion-label>
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button color="primary" (click)="onSubmit()">Terminar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-footer>
+</ion-content>

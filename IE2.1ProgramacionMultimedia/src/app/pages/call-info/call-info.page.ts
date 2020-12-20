@@ -30,10 +30,10 @@ export class CallInfoPage implements OnInit {
   }
 
   ngOnInit() {
+    
   }
 
   ngAfterViewInit() {
-
     this.image.nativeElement.src = this.pj.imageURL
   }
 
